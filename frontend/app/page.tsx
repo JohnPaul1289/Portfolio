@@ -41,12 +41,12 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.badge}>Graduating June 2026</div>
         <h1 className={styles.heroTitle}>
-          Engineering <span className="gradient-text">Bespoke</span> <br />
+          Building <span className="gradient-text">Bespoke</span> <br />
           Full-Stack & AI Systems
         </h1>
         <p className={styles.heroSubtitle}>
-          John Paul Gardoce — Bridging traditional enterprise reliability 
-          with the frontier of interactive AI.
+          John Paul Gardoce — BSIT student bridging traditional enterprise 
+          reliability with the frontier of interactive AI.
         </p>
         <div className={styles.heroActions}>
           <a href="#projects" className="btn-primary">View Solutions</a>
