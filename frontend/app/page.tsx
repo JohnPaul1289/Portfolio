@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import styles from "./page.module.css";
 
 const PROJECTS = [
@@ -43,6 +45,8 @@ const SKILLS = [
 ];
 
 export default function Home() {
+  const [showResume, setShowResume] = useState(false);
+
   return (
     <main className={styles.mainContent}>
       {/* Hero Section */}
@@ -58,9 +62,79 @@ export default function Home() {
         </p>
         <div className={styles.heroActions}>
           <a href="#projects" className="btn-primary">View Solutions</a>
-          <a href="#contact" className={styles.btnSecondary}>Collaborate</a>
+          <button onClick={() => setShowResume(true)} className={styles.btnSecondary}>View Resume</button>
         </div>
       </section>
+
+      {/* Resume Modal */}
+      {showResume && (
+        <div className={styles.modalOverlay} onClick={() => setShowResume(false)}>
+          <div className={`${styles.modalContent} glass-card`} onClick={e => e.stopPropagation()}>
+            <button className={styles.closeModal} onClick={() => setShowResume(false)}>&times;</button>
+            
+            <header className={styles.resumeHeader}>
+              <h1 className="gradient-text">John Paul Gardoce</h1>
+              <p className={styles.resumeSubtitle}>Junior Front-End Developer</p>
+              <div className={styles.resumeContact}>
+                <span>Solana, Cagayan, Philippines</span> | <span>+63 906 047 5183</span>
+              </div>
+            </header>
+
+            <div className={styles.resumeBody}>
+              <section className={styles.resumeSection}>
+                <h3>Profile</h3>
+                <p>Front-end developer with hands-on experience shipping real web applications for a government bureau. Comfortable building clean, responsive interfaces using HTML, CSS, and JavaScript. Currently finishing a BS in Information Technology at the University of Cagayan Valley.</p>
+              </section>
+
+              <div className={styles.resumeGrid}>
+                <div className={styles.resumeMain}>
+                  <section className={styles.resumeSection}>
+                    <h3>Experience</h3>
+                    <div className={styles.resumeItem}>
+                      <h4>Client Satisfaction Survey — Web Portal</h4>
+                      <p className={styles.resumeItemSub}>Mines and Geosciences Bureau (MGB) | Jan 2026 - Present</p>
+                      <ul>
+                        <li>Automated feedback collection and data analysis for MGB.</li>
+                        <li>Integrated Python-based facial recognition for secure admin login.</li>
+                        <li>Optimized for cross-browser compatibility and responsiveness.</li>
+                      </ul>
+                    </div>
+                    <div className={styles.resumeItem}>
+                      <h4>Inventory Tracking System — Internal Web App</h4>
+                      <p className={styles.resumeItemSub}>Mines and Geosciences Bureau (MGB) | Jan 2026 - Present</p>
+                      <ul>
+                        <li>Digitized bureau equipment and asset records management.</li>
+                        <li>Built search and filter using JavaScript and SQL for high-speed lookups.</li>
+                        <li>Designed clean, easy-to-use admin dashboard for monitoring.</li>
+                      </ul>
+                    </div>
+                  </section>
+                </div>
+
+                <div className={styles.resumeSide}>
+                  <section className={styles.resumeSection}>
+                    <h3>Skills</h3>
+                    <div className={styles.resumeSkills}>
+                      <span>HTML5 (Proficient)</span>
+                      <span>CSS3 (Proficient)</span>
+                      <span>JavaScript (Intermediate)</span>
+                      <span>Python (Basic)</span>
+                      <span>SQL (Basic)</span>
+                      <span>Git (Basic)</span>
+                    </div>
+                  </section>
+                  <section className={styles.resumeSection}>
+                    <h3>Education</h3>
+                    <p><strong>BS in Information Technology</strong></p>
+                    <p>University of Cagayan Valley</p>
+                    <p>2022 - 2026</p>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Projects Section */}
       <section id="projects" className={styles.section}>
