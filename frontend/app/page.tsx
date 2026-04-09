@@ -5,17 +5,25 @@ const PROJECTS = [
     id: 1,
     title: "MGB Inventory System",
     category: "Internal Enterprise Solution",
-    description: "A mission-critical PHP/MySQL system built for the Mines and Geosciences Bureau. Streamlined office workflows through integrated barcode scanning and optimized asset management.",
-    tags: ["PHP", "SQL", "Barcode Integration"],
+    description: "Developed a mission-critical web application to digitize and manage bureau equipment and asset records for the Mines and Geosciences Bureau (MGB). Built search and filter functionality using JavaScript and SQL to speed up inventory lookups.",
+    tags: ["JavaScript", "SQL", "PHP", "XAMPP"],
     status: "Active Use",
   },
   {
     id: 2,
-    title: "Biometric Survey Portal",
-    category: "Innovation & AI",
-    description: "A cloud-hosted survey platform featuring advanced facial recognition for administrative authentication. Bridging user feedback with modern security protocols.",
-    tags: ["Python", "Facial Recognition", "Cloud Hosting"],
-    status: "Live Application",
+    title: "Client Satisfaction Survey",
+    category: "Web Portal & Security",
+    description: "Built a secure web portal for MGB to automate feedback collection and data analysis. Integrated a Python-based facial recognition system for secure admin login and a real-time dashboard for performance trends.",
+    tags: ["HTML5", "CSS3", "JavaScript", "Python"],
+    status: "Active Use",
+  },
+  {
+    id: 3,
+    title: "Smart Assess",
+    category: "Capstone Project",
+    description: "A web-based examination system with automated scoring and result tracking. Designed and built for the University of Cagayan Valley to deliver a mobile-friendly interface across various screen sizes.",
+    tags: ["PHP", "MySQL", "JavaScript", "Responsive Design"],
+    status: "Completed",
   },
 ];
 
@@ -88,10 +96,10 @@ export default function Home() {
             <span className={styles.subheading}>The Professional Bio</span>
             <h2 className={styles.sectionTitleLeft}>Bridging Eras of Code</h2>
             <p>
-              By June 2026, I will transition from an honors IT student to a career architect. 
+              By June 2026, I will transition from the University of Cagayan Valley to the professional tech landscape. 
               My tenure at the Mines and Geosciences Bureau (MGB) allowed me to build 
-              real-world internal tools that bridge the gap between traditional enterprise systems (PHP/SQL) 
-              and modern AI-driven architectures (Python/FastAPI).
+              real-world internal tools—from digitizing inventory to automating client feedback—effectively 
+              bridging the gap between traditional IT and modern security-focused systems.
             </p>
           </div>
           <div className={`${styles.disciplineContent} glass-card`}>
